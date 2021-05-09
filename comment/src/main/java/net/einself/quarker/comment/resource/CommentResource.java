@@ -22,9 +22,11 @@ public class CommentResource {
 
     @POST
     public CommentCreateResponse create(@Valid CommentCreateRequest request) {
-        final var comment = new Comment();
-        comment.setThreadId(request.getThreadId());
-        comment.setText(request.getText());
+        final var comment = new Comment.Builder()
+                .threadId(request.getThreadId())
+                .text(request.getText())
+                .build();
+
         commentService.create(comment);
 
         return new CommentCreateResponse(comment.getId(), comment.getText());
