@@ -1,8 +1,15 @@
 package net.einself.quarker.comment.resource.dto;
 
+import net.einself.quarker.comment.validation.ThreadExists;
+
+import javax.validation.constraints.NotEmpty;
+
 public class CommentCreateRequest {
 
+    @ThreadExists
     private Long threadId;
+
+    @NotEmpty
     private String text;
 
     public String getText() {

@@ -14,12 +14,12 @@ this project is just for researching / studying  and will never go live or produ
 ```
 docker-compose up
 mvn -f ./comment/pom.xml quarkus:dev
-mvn -f ./thred/pom.xml quarkus:dev
+mvn -f ./thread/pom.xml quarkus:dev
 ```
 
 ## Endpoints
 
-* `GET http://locahost:8080/api/comments`
+* `GET http://locahost:8080/api/comments?threadId=:threadId`
 * `POST http://locahost:8080/api/comments`
 * `GET http://locahost:8080/api/threads`
 * `GET http://locahost:8080/api/threads/:id`

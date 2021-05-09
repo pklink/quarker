@@ -20,8 +20,8 @@ public class CommentService {
         return comment;
     }
 
-    public List<Comment> findAll() {
-        return commentRepository.listAll();
+    public List<Comment> findAllByThreadId(Long threadId) {
+        return commentRepository.listAllByThreadId(threadId);
     }
 
 }
