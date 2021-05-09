@@ -9,3 +9,7 @@ handle /api/comments {
     uri strip_prefix /api
     reverse_proxy gateway.docker.internal:9101
 }
+
+handle * {
+    reverse_proxy gateway.docker.internal:4200
+}

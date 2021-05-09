@@ -15,7 +15,12 @@ this project is just for researching / studying  and will never go live or produ
 docker-compose up
 mvn -f ./comment/pom.xml quarkus:dev
 mvn -f ./thread/pom.xml quarkus:dev
+npm --prefix frontend run start
 ```
+
+## Frontend
+
+http://localhost:8080
 
 ## Endpoints
 
