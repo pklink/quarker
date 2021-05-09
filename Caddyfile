@@ -1,0 +1,11 @@
+http://localhost:8080
+
+handle /api/threads* {
+    uri strip_prefix /api
+    reverse_proxy gateway.docker.internal:9001
+}
+
+handle /api/comments {
+    uri strip_prefix /api
+    reverse_proxy gateway.docker.internal:9101
+}

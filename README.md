@@ -1,0 +1,27 @@
+# Quarker
+
+microservice-based discussion board using
+
+* Quarkus
+* Docker
+* Caddy for development
+* MariaDB
+
+this project is just for researching / studying  and will never go live or productive - i think ;-)
+
+## Run
+
+```
+docker-compose up
+mvn -f ./comment/pom.xml quarkus:dev
+mvn -f ./thred/pom.xml quarkus:dev
+```
+
+## Endpoints
+
+* `GET http://locahost:8080/api/comments`
+* `POST http://locahost:8080/api/comments`
+* `GET http://locahost:8080/api/threads`
+* `GET http://locahost:8080/api/threads/:id`
+* `POST http://locahost:8080/api/threads`
+
